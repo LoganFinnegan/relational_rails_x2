@@ -1,0 +1,11 @@
+<p><%= link_to "Create Spell", "/wizards/#{@wizard.id}/wizard_spells/new", method: :get %> </p>
+<p><%= link_to "Un-Alphabetize", "/wizards/#{@wizard.id}/wizard_spells", method: :get %></p>
+
+
+<% @wizard_spells.each do |wizard_spell| %>
+  <div id="wizard_spell-<%= wizard_spell.id %>">
+    <h3><%= wizard_spell.name %></h3>
+    <p><%= wizard_spell.learned %></p>
+    <p><%= wizard_spell.spell_level %></p>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p><%= link_to "Delete Wizard", "/wizards/#{@wizard.id}", method: :delete %></p>
+<h1>Name: <%=@wizard.name%></h1>
+
+<p><%=link_to "Update Wizard", "/wizards/#{@wizard.id}/edit", method: :get %></p>
+<p><%=link_to "Spell List", "/wizards/#{@wizard.id}/wizard_spells", method: :get %></p>
+<p>Spell Count: <%=@wizard.spell_count%></p>
+
+<p>Level: <%=@wizard.level%></p>
+<p>Graduation Status: <%=@wizard.graduated%></p>
+<p>Age: <%=@wizard.age%></p>

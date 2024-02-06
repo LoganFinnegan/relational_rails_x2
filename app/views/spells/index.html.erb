@@ -1,0 +1,9 @@
+<% @spells.each do |spell| %>
+  <div id="spell-<%= spell.id %>">
+    <h3>Spell Name: <%= spell.name %></h3>
+    <p>Learned: <%= spell.learned %></p>
+    <p>Spell Level: <%= spell.spell_level %></p>
+    <p><%= link_to "Edit Spell: #{spell.name}", "/spells/#{spell.id}/edit", method: :get %></p>
+    <p><%= link_to "Delete Spell", "/spells/#{spell.id}", data: {turbo_method: :delete} %></p>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p><%= link_to "New Wizard", "/wizards/new", method: :get %></p>
+
+<% @wizards.each do |wizard| %>
+  <div id="wizard-<%= wizard.id %>">
+    <h3>Name: <%= wizard.name %></h3>
+    <p>Created at: <%= wizard.created_at%></p>
+    <p><%= link_to "Edit Wizard: #{wizard.name}", "/wizards/#{wizard.id}/edit", method: :get %></p>
+    <p><%= link_to "Delete Wizard", "/wizards/#{wizard.id}", data: {turbo_method: :delete} %></p>
+  </div>
+<% end %>

@@ -1,0 +1,6 @@
+<p><%= link_to "Delete Spell", "/spells/#{@spell.id}/", data: {turbo_method: :delete} %></p>
+<%= link_to "Update Spell", "/spells/#{@spell.id}/edit", method: :get %>
+
+<h1>Spell Name: <%=@spell.name%></h1>
+<p>Spell learned: <%=@spell.learned%></p>
+<p>Spell Level: <%=@spell.spell_level%></p>

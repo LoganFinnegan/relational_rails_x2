@@ -1,0 +1,12 @@
+<%= form_with url: "/wizards/#{@wizard.id}/wizard_spells", method: :post do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :learned %>
+  <%= f.text_field :learned %>
+
+  <%= f.label :spell_level %>
+  <%= f.number_field :spell_level %>
+
+  <%= f.submit "Create Spell"%>
+<% end %>
